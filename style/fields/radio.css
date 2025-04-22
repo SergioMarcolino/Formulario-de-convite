@@ -1,0 +1,127 @@
+.radio  {
+    display: flex;
+    border: 1px solid #2e2e2e;
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+    background-color: #1a1a1a; /* fundo da caixa externa */
+    & label {
+        margin: 0;
+    }
+  }
+  
+  .radio-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #cfcfcf;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    justify-content: center;
+  }
+  
+  .radio-btn img {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(1) brightness(1.2);
+    transition: filter 0.2s;
+  }
+  
+  /* Aplica o estilo ao botão selecionado */
+  input[type="radio"]:checked + .radio-btn {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    
+  }
+  
+  input[type="radio"]:checked + .radio-btn img {
+    filter: brightness(2) saturate(2);
+  }
+
+  .radio-color{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+   
+
+    & input{
+        border: 3px solid var(--shape-button);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+    }
+    & input:checked{
+        outline: 3px solid var(--brand-light);
+    }
+    
+    & #purple {
+        background-color: var(--purple);
+    }
+    & #blue {
+        background-color: #0c70c1;
+    }
+    & #fuschia {
+        background-color: var(--fuschia);
+    }
+    & #orange {
+        background-color: var(--orange);
+    }
+    & #yellow {
+        background-color: var(--yellow);
+    }
+    & #lime {
+        background-color: var(--lime);
+    }
+    & #green {
+        background-color: var(--green);
+    }
+    & #cyan {
+        background-color: var(--cyan);
+    }
+    & #navy {
+        background-color: var(--navy);
+    }
+    & #black {
+        background-color: black;
+    }
+    & #pink {
+        background-color: pink;
+    }
+
+  }
+ 
+.radio-event {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    & .card{
+        height: 103px;
+        width: 130px;
+        position: relative;
+        background-color: var(--shape-button);
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+        text-align: center;
+       
+        & input{
+            inset: 0;
+            position: absolute;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+
+            
+        }
+        &:has(input:checked) {
+            outline: 3px solid var(--brand-light);
+        }
+    }
+}

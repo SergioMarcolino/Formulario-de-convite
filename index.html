@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/style/style.css" />
+  <title>Formulário de Convite</title>
+</head>
+<body>
+  <div id="app">
+    <aside>
+      <div class="aside-container">
+        <header>
+          <img src="./assets/icons/Logo.svg" alt="Logo Logo stars" />
+          <div class="title">
+            <h2>Festivite</h2>
+            <p>Crie um convite digital para o seu evento</p>
+          </div>
+        </header>
+        <img src="./assets/Background.png" alt="" />
+      </div>
+    </aside>
+
+    <main>
+      <div class="main-container">
+        <h2>Crie seu convite</h2>
+        <form action="" method="post" enctype="multipart/form-data">
+          <fieldset class="about event">
+            <header>
+              <img src="./assets/icons/calendar.svg" alt="icon calendar" />
+              <legend>Sobre o evento</legend>
+            </header>
+
+            <div class="input-wrapper">
+              <label for="title">Título</label>
+              <input type="text" id="title" name="title" placeholder="Nome do evento" />
+            </div>
+
+            <div class="grid">
+              <div class="input-wrapper ">
+                <label for="inicio">Início</label>
+                <input type="date" name="inicio" id="inicio" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="fim">Fim</label>
+                <input type="date" name="fim" id="fim" />
+              </div>
+
+              <div class="input-wrapper" >
+                <label>Tipo</label>
+                <div class="radio">
+                  <input type="radio" name="tipo" id="presencial" value="presencial" hidden />
+                  <label for="presencial" class="radio-btn">
+                    <img src="./assets/icons/building-2.svg" alt="" />
+                    Presencial
+                  </label>
+
+                  <input type="radio" name="tipo" id="online" value="online" hidden />
+                  <label for="online" class="radio-btn">
+                    <img src="./assets/icons/video.svg" alt="" />
+                    Online
+                  </label>
+                </div>
+              </div>
+
+              <div class="input-wrapper" >
+                <label for="local">Local</label>
+                <input type="text" id="local" name="local" placeholder="Link ou endereço" />
+              </div>
+            </div>
+
+            <div class="text-area-wrapper">
+              <label for="descricao">Descrição</label>
+              <textarea name="descricao" id="descricao" placeholder="Escreva sobre os detalhes do evento" rows="6" cols="30"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="personalizacao">
+            <header>
+                <img src="/assets/icons/paintbrush-vertical.svg" alt=""><legend>Personalizacao</legend>
+                <div class="input-wrapper">
+            </header>
+            <div class="input-wrapper">
+                <label >Cor principal</label>
+                <div class="radio-color">
+                    <input type="radio" id="blue" name="color" value="blue" >
+                    <input type="radio" id="purple" name="color" value="purple" >
+                    <input type="radio" id="pink" name="color" value="pink" >
+                    <input type="radio" id="fuschia" name="color" value="fuschia" >
+                    <input type="radio" id="orange" name="color" value="orange" >
+                    <input type="radio" id="yellow" name="color" value="yellow" >
+                    <input type="radio" id="lime" name="color" value="lime"  >
+                    <input type="radio" id="green" name="color" value="green"  >
+                    <input type="radio" id="cyan" name="color" value="cyan" > 
+                    <input type="radio" id="navy" name="color" value="navy" >
+                    <input type="radio" id="black" name="color" value="black" >
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <label >Tema do evento</label>
+                <div class="radio-event">
+                    <div class="card">
+                        <img src="/assets/Image.svg" alt="">
+                        <input type="radio" value="aniversario" id="aniversario" name="tema" >
+                        <label>Aniversario</label>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/Image-1.svg" alt="">
+                        <input type="radio" value="aniversario" id="aniversario" name="tema" >
+                        <label>Infantil</label>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/Image-2.svg" alt="">
+                        <input type="radio" value="aniversario" id="aniversario" name="tema" >
+                        <label>Formatura</label>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/Image-3.svg" alt="">
+                        <input type="radio" value="aniversario" id="aniversario" name="tema" >
+                        <label>Casamento</label>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/Image-4.svg" alt="">
+                        <input type="radio" value="aniversario" id="aniversario" name="tema" >
+                        <label>Cha de bebe</label>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
