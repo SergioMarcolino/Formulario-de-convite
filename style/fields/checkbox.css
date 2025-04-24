@@ -1,0 +1,101 @@
+
+.bright {
+    display: flex;
+    gap: .7rem;
+    width: 176px;
+    & .ipt{
+        display: flex;
+       background-color: var(--input-base);
+       width: 64px;
+       height: 32px;
+       border: 1px solid var(--input-stroke);
+       border-radius:999px ;
+       align-items: center;
+       position: relative;
+
+
+       & input {
+        border-radius: 999px;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 4px;
+        top: calc(50% - 24px/2);
+        border: none;
+        background-color: var(--shape-button);
+
+       }
+       &:has(:checked){
+
+       input{
+        left: 26px;
+       }
+
+       .claro{
+        opacity: 0;
+       }
+            
+        }
+    }
+}
+
+
+.bright {
+    & .claro{
+        display: none;
+       }
+    & .escuro{
+        display: unset;
+    }
+
+    &:has(:checked){ 
+        .claro{
+          display: unset;
+        }
+        .escuro {
+            display: none;
+        }
+    }    
+}   
+
+
+.box {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+  
+    & input[type="checkbox"] {
+      appearance: none;
+      width: 0.5rem ;
+      height: 1rem;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      border-radius: 3px;
+      border: 1px solid var(--input-stroke);
+      padding: 0rem;
+      width: 1rem;
+      height: 1rem;
+    }
+  
+    & svg {
+      position: absolute;
+      display: none;
+      left: 2px;
+      bottom: 6px;
+    }
+  
+    & input[type="checkbox"]:checked + svg {
+      display: block;
+    }
+  
+    & input:checked{
+        outline: 1px solid var(--brand-mid);
+    }
+    & label {
+      margin-bottom: 0;
+    }
+  }
+  

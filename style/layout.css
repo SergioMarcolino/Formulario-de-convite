@@ -75,5 +75,9 @@ main {
         align-items: center;
 
     }
+    .erro{
+        display: none;
+        
+    }
 
 }

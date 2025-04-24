@@ -19,3 +19,19 @@ input[type="date"]{
         opacity: 0;
     }
 }
+.input-wrapper {
+    & input:user-invalid {
+      outline: 3px solid var(--danger);
+      margin-bottom: 5px;
+    }
+  
+    & input:user-invalid + .erro {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      
+    }
+  
+
+  }
+

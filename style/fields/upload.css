@@ -1,0 +1,30 @@
+.upload-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.file-label{
+    background-color: var(--shape-button);
+    height: 40px;
+    width: 119px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    gap: 8px ;
+    margin-bottom: 0px;
+
+    & svg path {
+        fill: white;
+        
+       
+      }
+      
+      &:hover path {
+        fill: var(--brand-light);
+      }
+   
+}
